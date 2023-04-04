@@ -1,0 +1,95 @@
+@import "var.sccs";
+@import "creators.scss";
+
+header{
+    nav{
+        box-shadow: 0px 2px 48px rgba(0, 0, 0, 0.06);
+        padding: 19px 0;
+        align-items: center;
+        .collapse{
+            ul{
+                gap: 30px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    a{
+                        color: $lighter;
+                        font-size: 16px;
+                        line-height: 22px;
+                        letter-spacing: 1.2px;
+                        span{
+                            font-size: 8px;
+                            line-height: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapper{
+        background:$bg-grad;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+        .wrapper-bg{
+            height: 622px;
+            background: url(../imges/Path\ 2.png) ;
+            // margin-left: 20px;
+            display: flex;
+            align-items: center;
+            
+            .wrapper-left{
+                max-width: 457px;
+                h1{
+                    font-size: 38px;
+                    line-height: 48px;
+                    letter-spacing: 1.425px;
+                    color: $dark;
+                }
+                p{
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: $lighter;
+                }
+                .d-flex{
+                    button{
+                        &:first-child{
+                            @include btnCreator(15px, 40px);
+                        }
+                        &:last-child{
+                            border: none;
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: 1px;
+                            background-color: transparent;
+                            span{
+                                margin:0 15px;
+                                @include spanCreator($light-pink);
+                                    
+                                }
+
+                            }
+                        }
+                    }
+                }
+                .wrapper-right{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .blur{
+                        width: 76px;
+                        height: 76px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: rgba($color: #fff, $alpha: 0.6);
+                        span{
+                            @include spanCreator(white);
+                            i{}
+                        }
+                    }
+                }
+            }
+        }
+    }
